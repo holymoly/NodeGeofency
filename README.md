@@ -17,7 +17,7 @@ Install Git and clone the repository
 
 ```
 sudo apt-get install git
-git clone https://github.com/holymoly/NodeGeofency
+git clone https://github.com/holymoly/NodeGeofency/tree/master
 cd NodeGeofency
 npm install
 ```
