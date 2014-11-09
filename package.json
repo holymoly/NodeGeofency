@@ -1,0 +1,29 @@
+{
+  "name": "GeoFency",
+  "version": "1.0.0",
+  "description": "Backend for Geofency IOS App",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.10.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "make test",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/holymoly/NodeGeofency"
+  },
+  "keywords": [
+    "Geofency",
+    "Node",
+    "Couchdb"
+  ],
+  "author": "holymoly",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/holymoly/NodeGeofency/issues"
+  },
+  "homepage": "https://github.com/holymoly/NodeGeofency"
+}
