@@ -2,6 +2,7 @@
  * Module dependencies.
  */
 var config = require('./config')
+var basicAuth = require('basic-auth');
 var express = require('express');
 var time = require('./routes/time');
 var bodyParser   = require('body-parser');
@@ -12,7 +13,7 @@ var app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
 // use basic authentication
 app.use(function(req, res, next) {
-    var user = auth(req);
+    var user = basicAuth(req);
 
     if (user === undefined || user['name'] !== config.authUser || user['pass'] !== config.authPass) {
         res.statusCode = 401;

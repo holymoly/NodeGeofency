@@ -4,6 +4,7 @@
   "description": "Backend for Geofency IOS App",
   "main": "server.js",
   "dependencies": {
+    "basic-auth": "^1.0.0",
     "body-parser": "^1.9.2",
     "express": "^4.10.1",
     "request": "^2.47.0"
