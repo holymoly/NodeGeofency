@@ -1,10 +1,11 @@
 var request = require('request');
+var config = require('../config');
 
 //Constructor
-function Couch(url,user,pass){
-  this.url  = url;
-  this.user = user;
-  this.pass = pass;
+function Couch(){
+  this.url  = config.couchUrl;
+  this.user = config.couchUser;
+  this.pass = config.couchPass;
 }
 
 //*****************************************************
