@@ -42,7 +42,7 @@ You can start the application with
 node server.js
 ```
 
-In your geofency application goto Webhooks and activate json and set the Urls to 
+In your IOS geofency app goto Webhooks set POST Format to Default, enter your Username and Password and set the Urls to 
 ```
 http://pi_IP:8765/time
 ```
