@@ -32,28 +32,15 @@ function requestCouch(url,type,method,data,destination,cb){
     if (err) {
       cb(err,undefined);
     }
-    if (!err && res.statusCode == 200) {
-      cb(undefined,JSON.parse(body));
-    }
-    if (!err && res.statusCode == 404) {
+    if (!err && (res.statusCode === 200 || res.statusCode === 404 || res.statusCode === 201)) {
       cb(undefined,JSON.parse(body));
     }
     //revision conflict
-    if (!err && res.statusCode == 409) {
+    if (!err && res.statusCode === 409) {
           cb(undefined,JSON.parse(body),{conflict:true});
-    }
-    if (!err && res.statusCode == 201) {
-      cb(undefined,JSON.parse(body));
     }
   });
 }
-
-//Returns the special security object for the database
-Couch.prototype.getDbDocid = function(db,docid,cb){
-  requestCouch(this.url,'/' + db + '/' + docid,'GET',undefined,undefined,function(err,response){
-    cb(err,response);
-  });
-};
 
 //Creates document in db
 Couch.prototype.postDb = function(db,data,cb){
