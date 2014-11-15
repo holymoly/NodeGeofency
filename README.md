@@ -35,7 +35,7 @@ http://pi_IP:5984/_utils.
 ```
 Create a Database called geofency. You should also add a user and password for your Account.
 
-In your local Git repo open routes/time.js and change the IP to the IP of your couchdb Server (IP of raspberry pi) and set the user and password.
+In your local Git repo open config.js and change the config.couchUrl to the IP/Domain of your couchdb Server (IP of raspberry pi) and set the user and password.
 
 You can start the application with 
 ```
