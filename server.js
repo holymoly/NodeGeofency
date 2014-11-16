@@ -1,7 +1,7 @@
 /**
  * Module dependencies.
  */
-var config = require('./config')
+var config = require('./config');
 var basicAuth = require('basic-auth');
 var express = require('express');
 var time = require('./routes/time');
@@ -15,7 +15,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(function(req, res, next) {
     var user = basicAuth(req);
 
-    if (user === undefined || user['name'] !== config.authUser || user['pass'] !== config.authPass) {
+    if (user === undefined || user.name !== config.authUser || user.pass !== config.authPass) {
         res.statusCode = 401;
         res.setHeader('WWW-Authenticate', 'Basic realm="NodeGeofency"');
         res.end('Unauthorized');
