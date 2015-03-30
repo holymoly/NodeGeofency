@@ -11,7 +11,7 @@ function Couch(){
 //*****************************************************
 //*             Call the couch                        *
 //*****************************************************
-function requestCouch(url,type,method,data,destination,cb){
+function requestCouch(url,type,method,data,cb){
   var contentLength = 0;
   if(data !== undefined){
     data = JSON.stringify(data);
@@ -43,7 +43,7 @@ function requestCouch(url,type,method,data,destination,cb){
 
 //Creates document in db
 Couch.prototype.postDb = function(db,data,cb){
-  requestCouch(this.url,'/' + db,'POST',data,undefined,function(err,response){
+  requestCouch(this.url,'/' + db,'POST',data,function(err,response){
     cb(err,response);
   });
 };
