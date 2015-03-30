@@ -23,7 +23,6 @@ function requestCouch(url,type,method,data,destination,cb){
       'Accept': 'application/json',
       'Content-Length': contentLength,
       'Content-Type': 'application/json',
-      'Destination': destination,
     },
     uri: url + type,
     body: data,
