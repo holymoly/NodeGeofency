@@ -43,7 +43,7 @@ function requestCouch(url,type,method,data,cb){
 
 //Creates document in db
 Couch.prototype.postDb = function(db,data,cb){
-  requestCouch(this.url,'/' + db,'POST',data,function(err,response){
+  requestCouch('http://' + this.user + ':' + this.pass + '@' + this.url,'/' + db,'POST',data,function(err,response){
     cb(err,response);
   });
 };
